@@ -260,7 +260,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title text-center">
-						<h2 class="epoqui-section-title">Linhas de Pesquisa, Desenvolvimento e Inovação</h2>
+						<h2 class="epoqui-section-title">Linhas de Pesquisa, desenvolvimento e inovação</h2>
 						<div class="border-shape"></div>
 					</div>
 				</div>
@@ -356,7 +356,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title text-center">
-						<h2 class="epoqui-section-title">Qualificação e Capacitação Profissional</h2>
+						<h2 class="epoqui-section-title">Qualificação e capacitação profissional</h2>
 						<span
 							style="display:block; margin-top:10px; margin-bottom: 25px; font-size:18px; color: #ff7427; font-weight: 600;">Capacitação
 							profissional</span>
@@ -520,7 +520,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="sec-title text-center" style="margin-bottom: 50px;">
-						<h1>Serviços Técnicos Especializados</h1>
+						<h1>Serviços técnicos especializados</h1>
 						<div class="border-shape"></div>
 						<p>Oferecemos serviços técnicos especializados para a indústria energética, conectando a
 							expertise local às demandas de empresas de petróleo, gás e energia que atuam ou planejam
@@ -592,9 +592,9 @@
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="sec-title text-center" style="margin-bottom: 50px;">
-						<h1>Conexão com Startups e Ecossistema de Inovação</h1>
+						<h1>Conexão com startups e ecossistema de inovação</h1>
 						<div class="border-shape" style="background: #fff;"></div>
-						<p style="color: #e0e0e0; max-width: 80%; margin: 0 auto;">Conectamos startups de tecnologia ao
+						<p style="color: #e0e0e0; max-width: 80%; margin: 18px auto 0;">Conectamos startups de tecnologia ao
 							mercado de petróleo, gás e energia, atuando como ponte entre inovação e implementação
 							industrial. Oferecemos suporte estratégico para desenvolvimento de negócios, validação
 							técnica e acesso ao mercado.</p>
@@ -676,9 +676,9 @@
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="sec-title text-center" style="margin-bottom: 30px;">
-						<h1>Como Entregamos</h1>
+						<h1>Como entregamos</h1>
 						<div class="border-shape"></div>
-						<p style="max-width: 80%; margin: 0 auto;">Operamos em ciclo completo de pesquisa,
+						<p style="max-width: 80%; margin: 18px auto 0;">Operamos em ciclo completo de pesquisa,
 							desenvolvimento e inovação, garantindo que cada projeto avance da concepção científica até a
 							implementação industrial com validação em ambientes reais.</p>
 					</div>
@@ -688,7 +688,7 @@
 			<!-- Subtitle -->
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h3 style="color: #1a6951; font-weight: 600; margin-bottom: 40px;">Nosso modelo de entrega</h3>
+					<h3 style="color: #1a6951; font-weight: 600; margin-bottom: 20px;">Nosso modelo de entrega</h3>
 				</div>
 			</div>
 
@@ -1105,7 +1105,7 @@
 					</div>
 					<div class="col-md-4 col-sm-12">
 						<div class="site-developer">
-							<span>Desenvolvido por <a href="https://innov4r.com.br/" target="_blank">INNOV4R</a></span>
+							<span>Desenvolvido por <a href="https://innov4r.com.br/" target="_blank">INNOV4R</a>.</span>
 						</div>
 					</div>
 				</div>
@@ -1284,6 +1284,29 @@
 		.team-social-profile ul li a:hover i {
 			transform: scale(1.2);
 			color: #ff7427 !important;
+		}
+
+		@media (max-width: 767px) {
+			.team-modal:before {
+				display: none;
+			}
+
+			.team-modal .modal-dialog {
+				display: block;
+				vertical-align: initial;
+				margin: 10px;
+			}
+
+			.team-modal .modal-content {
+				max-height: calc(100vh - 20px);
+				overflow: hidden;
+			}
+
+			.team-modal .modal-body {
+				max-height: 70vh;
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+			}
 		}
 	</style>
 

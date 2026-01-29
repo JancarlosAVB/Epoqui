@@ -1066,7 +1066,7 @@ background-color: rgba(0, 0, 0, 0.10);}
 }
 .sec-title  h1 {
   font-size: 36px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #1a6951;
   font-weight: bold;
 }
@@ -3967,7 +3967,7 @@ padding:10px
     font-weight: 700;
     color: #222;
     margin-bottom: 50px; /* Increased bottom margin */
-    text-transform: uppercase;
+    text-transform: none;
     position: relative;
     display: inline-block;
 }

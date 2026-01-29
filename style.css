@@ -1,1 +1,18 @@
 /*Input Your Custom CSS Here*/
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 120px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.slider-text .epoqui-banner-title {
+  text-transform: none !important;
+}

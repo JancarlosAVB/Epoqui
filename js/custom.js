@@ -243,15 +243,6 @@ $(document).ready(function(){
 				}
 			}
 		  }); 
-		/*
-		scrollUp
-		============================*/	
-		$.scrollUp({
-			scrollText: '<i class="icofont-rocket-alt-1"></i>',
-			easingType: 'linear',
-			scrollSpeed: 900,
-			animation: 'fade'
-		});	
 		
 		/*
 		Stikey Js

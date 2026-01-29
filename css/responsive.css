@@ -1,5 +1,9 @@
 /* Responsive CSS */
 
+.mobile-nav-menu {
+    display: none;
+}
+
 /* Medium Layout: 1280px */
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .slider-text h1 {
@@ -36,50 +40,251 @@
     }
     .mobile-nav-menu {
         display: block;
+        margin-top: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
+    .mean-container .mean-bar {
+        background: transparent !important;
+        padding: 0 !important;
+        min-height: 0 !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10000;
+    }
+    .mean-container .mean-nav {
+        background: #fff !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin-top: 0 !important;
+    }
+    .mean-container .mean-nav ul li a {
+        color: #1a6951 !important;
+        border-top: 1px solid #eee;
+        width: 100% !important;
+        padding: 14px 15px !important;
+    }
+    .mean-container .mean-nav ul li a:hover {
+        background: #1a6951 !important;
+        color: #fff !important;
+    }
+    .mean-container a.meanmenu-reveal {
+        color: #1a6951 !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+        right: 15px !important;
+        left: auto !important;
+        width: 20px !important;
+        height: 14px !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        background: transparent !important;
+    }
+    .mean-container a.meanmenu-reveal span {
+        background: #1a6951 !important;
+        height: 2px !important;
+        margin-top: 0 !important;
+        border-radius: 2px;
+    }
+    
     .logo {
-        text-align: center;
-        width: 100%;
+        text-align: left;
+        padding: 8px 0 8px 15px;
+        position: relative;
+        z-index: 10001;
+    }
+    .logo img {
+        max-height: 38px !important;
+        max-width: 150px;
     }
     .hd-sec {
-        padding: 10px 0;
+        padding: 0;
+        position: relative;
+    }
+    .mean-push {
+        display: none !important;
     }
     
     /* Banner Adjustments */
+    .slider {
+        height: auto !important;
+    }
+    .single-slide {
+        height: 500px !important;
+    }
+    .slider-caption {
+        padding: 0 15px;
+    }
     .slider-text h1 {
-        font-size: 28px;
-        line-height: 36px;
+        font-size: 26px !important;
+        line-height: 32px !important;
+        margin-bottom: 15px !important;
     }
     .epoqui-banner-title {
-        font-size: 28px;
-        line-height: 1.2;
+        font-size: 26px !important;
+        line-height: 1.2 !important;
     }
     .epoqui-banner-subtitle {
-        font-size: 16px;
-        line-height: 1.4;
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 25px !important;
     }
     .slider-caption ul li {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         margin-right: 0 !important;
     }
     .epoqui-btn-primary, .epoqui-btn-outline {
         width: 100%;
         text-align: center;
         display: block;
+        padding: 12px 20px !important;
+    }
+
+    .sec-title h1 {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+    }
+    .sec-title {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 35px !important;
+    }
+    .sec-title p {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        margin-top: 15px !important;
+    }
+
+    .about-tab {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    .about-tab li {
+        width: 50%;
+        margin: 0 !important;
+        padding: 5px;
+    }
+    .about-tab li a {
+        width: 100%;
+        text-align: center;
+        padding: 12px 10px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        line-height: 1.2;
+        font-size: 16px;
+    }
+
+    .delivery-timeline .row > [class*='col-'] {
+        width: 100% !important;
+        float: none !important;
+    }
+    .delivery-timeline .timeline-step {
+        padding: 10px 0;
+    }
+    .delivery-timeline .timeline-step h4 {
+        margin-bottom: 0;
+    }
+    .delivery-timeline .arrow-icon {
+        transform: none !important;
+        margin: 10px 0 0;
+    }
+
+    .research-card {
+        padding: 25px 20px !important;
+    }
+    .research-grid-row {
+        display: block !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+    .research-grid-row > [class*='col-'] {
+        display: block !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-bottom: 30px !important;
     }
     
+    /* Team Section Responsiveness */
+    .team-intro-text {
+        margin-bottom: 30px !important;
+    }
+    .team-intro-text h3 {
+        font-size: 22px !important;
+    }
+    .team-member {
+        margin-bottom: 30px;
+    }
+    .team-modal .modal-body {
+        padding: 20px;
+    }
+    .team-modal .bio-img {
+        margin-bottom: 20px;
+        max-width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    
+    /* Footer Responsiveness */
+    .footer-wedget-one, .footer-wedget-four {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    .footer-logo {
+        margin: 0 0 20px !important;
+    }
+    .footer-social ul {
+        justify-content: flex-start;
+        display: flex;
+    }
+    .footer-contact-inner {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .footer-contact-info {
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        text-align: left;
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .footer-contact-info-icon {
+        margin-right: 12px !important;
+    }
+    .footer-bottom-sec {
+        text-align: center;
+    }
+    .copy-right, .site-developer {
+        text-align: center !important;
+        margin-bottom: 10px;
+    }
+
     /* General Adjustments */
-    .pt-100 { padding-top: 50px; }
-    .pb-100 { padding-bottom: 50px; }
+    .pt-100 { padding-top: 50px !important; }
+    .pb-100 { padding-bottom: 50px !important; }
+    .pb-130 { padding-bottom: 60px !important; }
     
     .section-title h2 {
-        font-size: 24px;
-    }
-    
-    /* Hide top bar if it still exists (user asked to remove it, already done in HTML but good to be safe) */
-    .header-top {
-        display: none;
+        font-size: 24px !important;
     }
 }
 
@@ -87,5 +292,11 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .epoqui-banner-title {
         font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .about-tab li {
+        width: 100%;
     }
 }

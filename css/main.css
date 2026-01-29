@@ -144,6 +144,7 @@ textarea:focus, input:focus{
 .pt-100{padding-top:100px}
 .pb-100{padding-bottom:100px}
 .pb-70{padding-bottom:70px}
+.pb-130{padding-bottom:130px}
 .bg-color{background:#fbfbfb}
 .no-padding-left{padding-left:0px}
 .no-padding-right{padding-right:0px}
@@ -476,7 +477,7 @@ margin-left : 6px;
   position: fixed;
   z-index: 9999;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
-  background:#fff;
+  background: #fff6f1;
 }
 .applay-button {
 	position: relative;
@@ -919,7 +920,7 @@ margin-right: 10px; transition: all 0.4s ease 0s;
 .contact-info-text span {
 	color: #999999;
 	font-size: 16px;
-	font-weight: ;
+	font-weight: 400;
 	display: inline-block;
 	width: 100%;
 }
@@ -2015,7 +2016,7 @@ position:relative;
 .contact-info-text span {
 	color: #999999;
 	font-size: 16px;
-	font-weight: ;
+	font-weight: 400;
 	display: inline-block;
 	width: 100%;
 }
@@ -3808,4 +3809,436 @@ padding:10px
 .site-developer span  a{
 	color:#ff7427;
 }
+/* Soluções Hero Section */
+.solucoes-hero {
+    background-image: url(../img/solucoes-epoqui.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 150px 0;
+    margin-bottom: 50px;
+}
+.solucoes-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 5.4), rgba(255, 116, 39, 0.3));
+}
+.solucoes-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.solucoes-content h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.solucoes-content p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+@media only screen and (max-width: 767px) {
+    .solucoes-hero {
+        padding: 80px 0;
+    }
+    .solucoes-content {
+        max-width: 90%;
+    }
+    .solucoes-content h1 {
+        font-size: 32px;
+    }
+}
+/* End Soluções Hero Section */
+
+/* Research Cards Section */
+.research-grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -25px; /* Increase negative margin to compensate for larger gutters */
+    margin-left: -25px;
+}
+
+/* Target columns directly for spacing */
+.research-grid-row > [class*='col-'] {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 50px; /* Explicit vertical gap between rows */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fix for Bootstrap 3 row pseudo-elements interfering with flexbox */
+.research-grid-row::before,
+.research-grid-row::after {
+    display: none;
+}
+
+.research-card {
+    background: #fff;
+    padding: 40px 30px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin: 0; /* Margin handled by column wrapper */
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    flex-grow: 1; /* Ensure card fills column height */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.research-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #ff7427;
+    transition: width 0.3s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 116, 39, 0.15);
+}
+
+.research-card:hover::after {
+    width: 100%;
+}
+
+.research-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 116, 39, 0.1);
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.research-icon i {
+    font-size: 36px;
+    color: #ff7427;
+    line-height: 80px;
+    transition: all 0.3s ease;
+}
+
+.research-card:hover .research-icon {
+    background: #ff7427;
+}
+
+.research-card:hover .research-icon i {
+    color: #fff;
+}
+
+.research-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+.research-card:hover h3 {
+    color: #ff7427;
+}
+
+.research-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
+    margin: 0;
+}
+
+.epoqui-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 50px; /* Increased bottom margin */
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+/* End Research Cards Section */
+
+/* Qualification Section - Dark Mode Overrides */
+.qualification-sec {
+    background-color: #031c14; /* Deep Dark Green */
+    color: #fff;
+}
+
+/* Override standard section title for dark background */
+.qualification-sec .sec-title h1,
+.qualification-sec .sec-title h2,
+.qualification-sec .epoqui-section-title {
+    color: #fff;
+}
+.qualification-sec .sec-title p {
+    color: #e0e0e0;
+}
+.qualification-sec .border-shape {
+    background: #fff;
+}
+
+/* Override Why Choose Us components for dark background */
+.qualification-sec .why-choose-v1-single .media-body h2 {
+    color: #fff;
+    font-size: 18px; /* Adjusted for better fit */
+}
+.qualification-sec .why-choose-v1-single .media-body p {
+    color: #e0e0e0;
+}
+.qualification-sec .why-choose-v1-single .icon {
+    border-color: #ff7427;
+    color: #ff7427;
+}
+
+/* Research Card adjustments for this section */
+.qualification-sec .research-card {
+    background: #062b1f; /* Slightly lighter than section bg */
+    border: 1px solid #0a402e;
+}
+.qualification-sec .research-card h3 {
+    color: #fff;
+}
+.qualification-sec .research-card p,
+.qualification-sec .research-card li {
+    color: #e0e0e0;
+}
+.qualification-sec .research-card:hover {
+    background: #083627;
+    border-color: #ff7427;
+}
+
+/* List styles within cards */
+.qual-list {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+.qual-list li {
+    list-style: disc;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+/* Diferenciais New List Style */
+.diferenciais-list-new {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.diferenciais-list-new li {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+.diferenciais-list-new .d-icon {
+    min-width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: rgba(255, 116, 39, 0.1);
+    border-radius: 50%;
+    margin-right: 20px;
+    color: #ff7427;
+    font-size: 24px;
+    border: 1px solid #ff7427;
+}
+.diferenciais-list-new .d-content strong {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.diferenciais-list-new .d-content p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* End Qualification Section */
+
+/* Technical Services Section */
+.technical-services-sec {
+    background-color: #f9f9f9; /* Light gray background */
+}
+.technical-services-sec .research-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+.technical-services-sec .research-card:hover {
+    border-color: #ff7427;
+}
+/* Ensure dark text for this light section */
+.technical-services-sec h1,
+.technical-services-sec h2,
+.technical-services-sec h3 {
+    color: #222 !important;
+}
+.technical-services-sec p,
+.technical-services-sec li {
+    color: #444 !important;
+}
+/* End Technical Services Section */
+
+/* Delivery Model Section */
+.delivery-model-sec {
+    background-color: #fff;
+}
+.delivery-timeline {
+    position: relative;
+    padding: 40px 0;
+    margin: 30px 0 50px;
+}
+.delivery-timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.timeline-step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: #fff;
+    padding: 0 10px;
+}
+.timeline-icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #ff7427;
+    color: #ff7427;
+    font-size: 24px;
+    margin: 0 auto 15px;
+    transition: all 0.3s ease;
+}
+.timeline-step:hover .timeline-icon {
+    background: #ff7427;
+    color: #fff;
+}
+.timeline-step h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+}
+.arrow-icon {
+    color: #ff7427;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.delivery-model-sec .sec-title h1,
+.delivery-model-sec .sec-title h2,
+.delivery-model-sec .sec-title h3 {
+    color: #222 !important;
+}
+.delivery-model-sec p {
+    color: #666 !important;
+}
+@media only screen and (max-width: 991px) {
+    .delivery-timeline::before {
+        display: none;
+    }
+    .timeline-step {
+        margin-bottom: 30px;
+    }
+    .arrow-icon {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+}
+/* End Delivery Model Section */
+
+/* Main Diferenciais Section */
+.diferenciais-main-sec {
+    background-image: url(../img/img-epoqui.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+.diferenciais-main-sec::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.92); /* Strong light overlay for "Fundo Claro" feel */
+    z-index: -1;
+}
+.diff-card {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    height: 100%;
+    min-height: 280px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.diff-card:hover {
+    border-color: #ff7427;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+}
+.diff-card .icon {
+    font-size: 40px;
+    color: #1a6951;
+    margin: 0 auto 20px;
+    display: block; /* Ensure stacking */
+}
+.diff-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+    position: relative;
+    display: block; /* Ensure stacking */
+    padding-bottom: 15px;
+}
+.diff-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #ff7427;
+}
+.diff-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+/* End Main Diferenciais Section */
+
 /* The End */
